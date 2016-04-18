@@ -1,0 +1,169 @@
+
+**** 03/26/16 15:21:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "full_adder-full_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\full_adder\full_adder.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "full_adder.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../xy_carry_in.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\full_adder.net" 
+
+
+
+**** INCLUDING full_adder.net ****
+* source LAB04
+.EXTERNAL OUTPUT SUM
+.EXTERNAL OUTPUT CARRY_OUT
+X_U1_U1A         N00462 N00070 SUM $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U2A         N00462 N00070 N00148 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2_U1A         N00460 N00259 N00070 $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2_U2A         N00460 N00259 N00160 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3A         N00148 N00160 CARRY_OUT $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_Carry_in         STIM(1,0) $G_DPWR $G_DGND N00462 IO_STM STIMULUS=Carry_in
+U_X         STIM(1,0) $G_DPWR $G_DGND N00460 IO_STM STIMULUS=X
+U_Y         STIM(1,0) $G_DPWR $G_DGND N00259 IO_STM STIMULUS=Y
+
+**** RESUMING full_adder.cir ****
+.END
+
+* C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\xy_carry_in.stl written on Sat Mar 26 15:16:58 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! X Digital Y Digital Carry_in Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 8ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Carry_in STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS Y STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS X STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat
+
+**** 03/26/16 15:21:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "full_adder-full_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\full_adder\full_adder.sim 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_86_1          D_86_2          D_86_3          
+      TPLHMN    0               3.600000E-09    4.800000E-09    2.400000E-09 
+      TPLHTY    0               9.000000E-09   12.000000E-09    6.000000E-09 
+      TPLHMX    0              17.000000E-09   24.000000E-09    6.000000E-09 
+      TPHLMN    0               2.000000E-09    2.800000E-09    2.400000E-09 
+      TPHLTY    0               5.000000E-09    7.000000E-09    6.000000E-09 
+      TPHLMX    0              11.000000E-09   16.000000E-09    6.000000E-09 
+
+
+               D_08            D_32            
+      TPLHMN    7.000000E-09    4.000000E-09 
+      TPLHTY   17.500000E-09   10.000000E-09 
+      TPLHMX   27.000000E-09   15.000000E-09 
+      TPHLMN    4.800000E-09    5.600000E-09 
+      TPHLTY   12.000000E-09   14.000000E-09 
+      TPHLMX   19.000000E-09   22.000000E-09 
+
+
+**** 03/26/16 15:21:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "full_adder-full_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\full_adder\full_adder.sim 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 03/26/16 15:21:18 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "full_adder-full_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\full_adder\full_adder.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+

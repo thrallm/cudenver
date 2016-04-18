@@ -1,0 +1,165 @@
+
+**** 04/15/16 19:09:33 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "test-D-FF-test-D-FF"  [ c:\users\m\desktop\cudenver\csci_1510\labs\lab05\lab05-pspicefiles\test-d-ff\test-d-ff.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test-D-FF.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../test-t-from-jk.stl" 
+.STMLIB "../../../test-d-from-jk.stl" 
+.STMLIB "../../../test-d-ff.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\test-D-FF.net" 
+
+
+
+**** INCLUDING test-D-FF.net ****
+* source LAB05
+.EXTERNAL OUTPUT Q
+.EXTERNAL OUTPUT Qnot
+X_U1_U2A         Q U1_N00342 N00233 QNOT $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U1B         U1_N00328 N00219 U1_N00464 U1_N00342 $G_DPWR $G_DGND 7410
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U3A         U1_N00328 QNOT Q $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U1A         U1_N00350 N00219 N00233 U1_N00328 $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U1C         U1_N00342 N00247 N00233 U1_N00464 $G_DPWR $G_DGND 7410 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U1_U3B         U1_N00464 U1_N00328 U1_N00350 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_Clk         STIM(1,0) $G_DPWR $G_DGND N00219 IO_STM STIMULUS=Clk
+U_D         STIM(1,0) $G_DPWR $G_DGND N00247 IO_STM STIMULUS=D
+U_Clear_n         STIM(1,0) $G_DPWR $G_DGND N00233 IO_STM STIMULUS=Clear_n
+
+**** RESUMING test-D-FF.cir ****
+.END
+
+* C:\Users\thrallm\Desktop\csci_1510\labs\lab05\test-t-from-jk.stl written on Thu Apr 14 15:10:37 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! Clear_n Digital Clk Digital T Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 305.06627028366ms 313.95515917255ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Clear_n STIM (1, 1) ;! CLOCK 1 0.99999 0 0
++   +0s 0
++   +9.99999999995us 1
++   Repeat Forever
++      +0.99999s 0
++      +9.99999999995us 1
++   EndRepeat
+.STIMULUS Clk STIM (1, 1) ;! CLOCK 30000 0.5 0 0
++   +0s 0
++   +16.66666666667us 1
++   Repeat Forever
++      +16.66666666667us 0
++      +16.66666666667us 1
++   EndRepeat
+.STIMULUS T STIM (1, 1) ;! CLOCK 1k 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+
+**** 04/15/16 19:09:33 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "test-D-FF-test-D-FF"  [ c:\users\m\desktop\cudenver\csci_1510\labs\lab05\lab05-pspicefiles\test-d-ff\test-d-ff.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_10            D_00            
+      TPLHMN    4.400000E-09    4.400000E-09 
+      TPLHTY   11.000000E-09   11.000000E-09 
+      TPLHMX   22.000000E-09   22.000000E-09 
+      TPHLMN    2.800000E-09    2.800000E-09 
+      TPHLTY    7.000000E-09    7.000000E-09 
+      TPHLMX   15.000000E-09   15.000000E-09 
+
+
+**** 04/15/16 19:09:33 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "test-D-FF-test-D-FF"  [ c:\users\m\desktop\cudenver\csci_1510\labs\lab05\lab05-pspicefiles\test-d-ff\test-d-ff.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 04/15/16 19:09:33 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "test-D-FF-test-D-FF"  [ c:\users\m\desktop\cudenver\csci_1510\labs\lab05\lab05-pspicefiles\test-d-ff\test-d-ff.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+

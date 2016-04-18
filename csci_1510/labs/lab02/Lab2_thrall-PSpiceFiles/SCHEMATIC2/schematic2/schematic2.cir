@@ -1,0 +1,20 @@
+** Profile: "SCHEMATIC2-schematic2"  [ c:\users\m\desktop\cudenver\1510_labs\lab02\lab2_thrall-pspicefiles\schematic2\schematic2.sim ] 
+
+** Creating circuit file "schematic2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../lab2input.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+.END

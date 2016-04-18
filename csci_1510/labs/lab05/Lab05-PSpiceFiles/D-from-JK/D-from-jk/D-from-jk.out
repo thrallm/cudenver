@@ -1,0 +1,207 @@
+
+**** 04/12/16 14:53:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "D-from-JK-D-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\Lab05-PSpiceFiles\D-from-JK\D-from-jk.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "D-from-jk.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../test-t-from-jk.stl" 
+.STMLIB "../../../test-d-ff.stl" 
+* From [PSPICE NETLIST] section of C:\Users\thrallm\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\D-from-JK.net" 
+
+
+
+**** INCLUDING D-from-JK.net ****
+* source LAB05
+.EXTERNAL OUTPUT Q
+.EXTERNAL OUTPUT notQ
+U_CLK         STIM(1,0) $G_DPWR $G_DGND N00209 IO_STM STIMULUS=CLK
+X_U1A         N00209 N00291 N00221 N00701 Q NOTQ $G_DPWR $G_DGND 74107 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_D         STIM(1,0) $G_DPWR $G_DGND N00221 IO_STM STIMULUS=D
+X_U2A         N00221 N00701 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_Clear_n         STIM(1,0) $G_DPWR $G_DGND N00291 IO_STM STIMULUS=Clear_n
+
+**** RESUMING D-from-jk.cir ****
+.END
+
+* C:\Users\thrallm\Desktop\csci_1510\labs\lab05\test-t-from-jk.stl written on Tue Apr 12 14:25:28 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! Clear_n Digital Clk Digital T Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 9.409596680062ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Clear_n STIM (1, 1) ;! CLOCK 1 0.99999 0 0
++   +0s 0
++   +9.99999999995us 1
++   Repeat Forever
++      +0.99999s 0
++      +9.99999999995us 1
++   EndRepeat
+.STIMULUS Clk STIM (1, 1) ;! CLOCK 3547 0.5 0 0
++   +0s 0
++   +140.96419509445us 1
++   Repeat Forever
++      +140.96419509445us 0
++      +140.96419509445us 1
++   EndRepeat
+.STIMULUS T STIM (1, 1) ;! CLOCK 1k 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+
+**** 04/12/16 14:53:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "D-from-JK-D-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\Lab05-PSpiceFiles\D-from-JK\D-from-jk.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_107_4         D_107_3         D_04            
+      TPLHMN    0               6.000000E-09    2.400000E-09    4.800000E-09 
+      TPLHTY    0               6.000000E-09    6.000000E-09   12.000000E-09 
+      TPLHMX    0               6.000000E-09    6.000000E-09   22.000000E-09 
+      TPHLMN    0               0               2.400000E-09    3.200000E-09 
+      TPHLTY    0               0               6.000000E-09    8.000000E-09 
+      TPHLMX    0               0               6.000000E-09   15.000000E-09 
+
+
+**** 04/12/16 14:53:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "D-from-JK-D-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\Lab05-PSpiceFiles\D-from-JK\D-from-jk.sim ] 
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_107_1         D_107_2         
+  TPCLKQLHMN    4.000000E-09    4.000000E-09 
+  TPCLKQLHTY   10.000000E-09   10.000000E-09 
+  TPCLKQLHMX   16.000000E-09   19.000000E-09 
+  TPCLKQHLMN    7.200000E-09    7.600000E-09 
+  TPCLKQHLTY   18.000000E-09   19.000000E-09 
+  TPCLKQHLMX   28.000000E-09   34.000000E-09 
+   TPPCQLHMN    4.000000E-09    4.000000E-09 
+   TPPCQLHTY   10.000000E-09   10.000000E-09 
+   TPPCQLHMX   15.000000E-09   19.000000E-09 
+   TPPCQHLMN    4.000000E-09    7.600000E-09 
+   TPPCQHLTY   10.000000E-09   19.000000E-09 
+   TPPCQHLMX   15.000000E-09   34.000000E-09 
+    TWCLKLMN    0               0            
+    TWCLKLTY   20.000000E-09   20.000000E-09 
+    TWCLKLMX   20.000000E-09   20.000000E-09 
+    TWCLKHMN    0               0            
+    TWCLKHTY   20.000000E-09   20.000000E-09 
+    TWCLKHMX   20.000000E-09   20.000000E-09 
+     TWPCLMN    0               0            
+     TWPCLTY   20.000000E-09   20.000000E-09 
+     TWPCLMX   20.000000E-09   20.000000E-09 
+   TSUDCLKMN    0               0            
+   TSUDCLKTY   20.000000E-09   20.000000E-09 
+   TSUDCLKMX   10.000000E-09   10.000000E-09 
+ TSUPCCLKHMN    0               0            
+ TSUPCCLKHTY    0               0            
+ TSUPCCLKHMX    0               0            
+    THDCLKMN    0               0            
+    THDCLKTY    6.000000E-09    6.000000E-09 
+    THDCLKMX    6.000000E-09    6.000000E-09 
+  TSUCECLKMN    0               0            
+  TSUCECLKTY    0               0            
+  TSUCECLKMX    0               0            
+   THCECLKMN    0               0            
+   THCECLKTY    0               0            
+   THCECLKMX    0               0            
+
+
+**** 04/12/16 14:53:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "D-from-JK-D-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\Lab05-PSpiceFiles\D-from-JK\D-from-jk.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.373000E-09 
+      TSWHL2                    1.346000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.382000E-09 
+      TSWLH2                    3.424000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 04/12/16 14:53:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "D-from-JK-D-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\Lab05-PSpiceFiles\D-from-JK\D-from-jk.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+

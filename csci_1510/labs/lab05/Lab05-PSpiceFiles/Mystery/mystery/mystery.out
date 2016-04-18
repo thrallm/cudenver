@@ -1,0 +1,213 @@
+
+**** 04/15/16 20:26:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Mystery-mystery"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05-pspicefiles\mystery\mystery.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mystery.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../mystery.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Mystery.net" 
+
+
+
+**** INCLUDING Mystery.net ****
+* source LAB05
+.EXTERNAL OUTPUT Q0not
+.EXTERNAL OUTPUT Q1not
+.EXTERNAL OUTPUT Q2not
+.EXTERNAL OUTPUT Q0
+.EXTERNAL OUTPUT Q1
+.EXTERNAL OUTPUT Q2
+X_U1_U1A         N00199 N00102 N00137 N00137 Q0 Q0NOT $G_DPWR $G_DGND 74107
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2_U1A         Q0 N00102 N00137 N00137 Q1 Q1NOT $G_DPWR $G_DGND 74107 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3_U1A         Q1 N00102 N00137 N00137 Q2 Q2NOT $G_DPWR $G_DGND 74107 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_CLK         STIM(1,0) $G_DPWR $G_DGND N00199 IO_STM STIMULUS=CLK
+U_Clear_n         STIM(1,0) $G_DPWR $G_DGND N00102 IO_STM STIMULUS=Clear_n
+U_T         STIM(1,0) $G_DPWR $G_DGND N00137 IO_STM STIMULUS=T
+
+**** RESUMING mystery.cir ****
+.END
+
+* C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\mystery.stl written on Fri Apr 15 20:19:00 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! Clear_n Digital Clk Digital T Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 4s
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Clear_n STIM (1, 1) ;! CLOCK 1 0.99999 0 0
++   +0s 0
++   +9.99999999995us 1
++   Repeat Forever
++      +0.99999s 0
++      +9.99999999995us 1
++   EndRepeat
+.STIMULUS Clk STIM (1, 1) ;! CLOCK 29540 0.5 0 0
++   +0s 0
++   +16.92620176033us 1
++   Repeat Forever
++      +16.92620176033us 0
++      +16.92620176033us 1
++   EndRepeat
+.STIMULUS T STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat
+
+**** 04/15/16 20:26:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Mystery-mystery"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05-pspicefiles\mystery\mystery.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_107_4         D_107_3         
+      TPLHMN    0               6.000000E-09    2.400000E-09 
+      TPLHTY    0               6.000000E-09    6.000000E-09 
+      TPLHMX    0               6.000000E-09    6.000000E-09 
+      TPHLMN    0               0               2.400000E-09 
+      TPHLTY    0               0               6.000000E-09 
+      TPHLMX    0               0               6.000000E-09 
+
+
+**** 04/15/16 20:26:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Mystery-mystery"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05-pspicefiles\mystery\mystery.sim ] 
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_107_1         D_107_2         
+  TPCLKQLHMN    4.000000E-09    4.000000E-09 
+  TPCLKQLHTY   10.000000E-09   10.000000E-09 
+  TPCLKQLHMX   16.000000E-09   19.000000E-09 
+  TPCLKQHLMN    7.200000E-09    7.600000E-09 
+  TPCLKQHLTY   18.000000E-09   19.000000E-09 
+  TPCLKQHLMX   28.000000E-09   34.000000E-09 
+   TPPCQLHMN    4.000000E-09    4.000000E-09 
+   TPPCQLHTY   10.000000E-09   10.000000E-09 
+   TPPCQLHMX   15.000000E-09   19.000000E-09 
+   TPPCQHLMN    4.000000E-09    7.600000E-09 
+   TPPCQHLTY   10.000000E-09   19.000000E-09 
+   TPPCQHLMX   15.000000E-09   34.000000E-09 
+    TWCLKLMN    0               0            
+    TWCLKLTY   20.000000E-09   20.000000E-09 
+    TWCLKLMX   20.000000E-09   20.000000E-09 
+    TWCLKHMN    0               0            
+    TWCLKHTY   20.000000E-09   20.000000E-09 
+    TWCLKHMX   20.000000E-09   20.000000E-09 
+     TWPCLMN    0               0            
+     TWPCLTY   20.000000E-09   20.000000E-09 
+     TWPCLMX   20.000000E-09   20.000000E-09 
+   TSUDCLKMN    0               0            
+   TSUDCLKTY   20.000000E-09   20.000000E-09 
+   TSUDCLKMX   10.000000E-09   10.000000E-09 
+ TSUPCCLKHMN    0               0            
+ TSUPCCLKHTY    0               0            
+ TSUPCCLKHMX    0               0            
+    THDCLKMN    0               0            
+    THDCLKTY    6.000000E-09    6.000000E-09 
+    THDCLKMX    6.000000E-09    6.000000E-09 
+  TSUCECLKMN    0               0            
+  TSUCECLKTY    0               0            
+  TSUCECLKMX    0               0            
+   THCECLKMN    0               0            
+   THCECLKTY    0               0            
+   THCECLKMX    0               0            
+
+
+**** 04/15/16 20:26:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Mystery-mystery"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05-pspicefiles\mystery\mystery.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 04/15/16 20:26:58 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "Mystery-mystery"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05-pspicefiles\mystery\mystery.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+

@@ -1,0 +1,22 @@
+** Profile: "T-from-JK-t-from-jk"  [ C:\Users\thrallm\Desktop\csci_1510\labs\lab05\lab05-pspicefiles\t-from-jk\t-from-jk.sim ] 
+
+** Creating circuit file "t-from-jk.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../test-d-from-jk.stl" 
+.STMLIB "../../../test-t-from-jk.stl" 
+.STMLIB "../../../test-d-ff.stl" 
+* From [PSPICE NETLIST] section of C:\Users\thrallm\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\T-from-JK.net" 
+
+
+.END

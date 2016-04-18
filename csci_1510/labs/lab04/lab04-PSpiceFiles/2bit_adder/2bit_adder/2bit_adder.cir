@@ -1,0 +1,21 @@
+** Profile: "2bit_adder-2bit_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\2bit_adder\2bit_adder.sim ] 
+
+** Creating circuit file "2bit_adder.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../2bitaddertest.stl" 
+.STMLIB "../../../xy_carry_in.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\2bit_adder.net" 
+
+
+.END

@@ -1,0 +1,121 @@
+(ExpressProject "lab04"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\lab04.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "0")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "TRUE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lab04-pspicefiles\full_adder\full_adder.net"
+      (Type "Report"))
+    (File ".\lab04.olb"
+      (Type "Schematic Library"))
+    (File ".\lab04-pspicefiles\2bit_adder\2bit_adder.net"
+      (Type "Report"))
+    (File ".\lab04-pspicefiles\half_adder_demo\half_adder_demo.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab04-pspicefiles\full_adder\full_adder.sim"
+        (DisplayName "full_adder-full_adder")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab04-pspicefiles\2bit_adder\2bit_adder.sim"
+        (DisplayName "2bit_adder-2bit_adder")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lab04-pspicefiles\half_adder_demo\halfadder.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab04-pspicefiles\half_adder_demo\halfadder.sim"
+        (DisplayName "half_adder_demo-halfadder")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User)
+      (File ".\xy.stl"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\xy.stl"))
+      (File ".\2bitaddertest.stl"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\2bitaddertest.stl"))
+      (File ".\xy_carry_in.stl"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\xy_carry_in.stl")))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (DigStim1
+      (FullPartName "DigStim1.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (full_adder
+      (FullPartName "full_adder.Normal")
+      (LibraryName "C:\USERS\M\DESKTOP\CUDENVER\CSCI_1510\LABS\LAB04\LAB04.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (7432
+      (FullPartName "7432.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (half_adder
+      (FullPartName "half_adder.Normal")
+      (LibraryName "C:\USERS\M\DESKTOP\CUDENVER\CSCI_1510\LABS\LAB04\LAB04.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn"
+         "half_adder_demo")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn"
+         "2bit_adder")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn"
+         "full_adder")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn"
+         "half_adder")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04.dsn"
+         "half_adder" "half_adder"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 422"))
+      (Tab 0)))
+  (MPSSessionName "m"))

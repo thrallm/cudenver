@@ -1,0 +1,162 @@
+(ExpressProject "Lab05"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\lab05.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "0")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "TRUE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lab05-pspicefiles\test-d-ff\test-d-ff.net"
+      (Type "Report"))
+    (File ".\lab05-pspicefiles\t-from-jk\t-from-jk.net"
+      (Type "Report"))
+    (File ".\lab05-pspicefiles\d-from-jk\d-from-jk.net"
+      (Type "Report"))
+    (File ".\lab05.olb"
+      (Type "Schematic Library"))
+    (File ".\lab05-pspicefiles\test-t-from-jk\test-t-from-jk.net"
+      (Type "Report"))
+    (File ".\lab05-pspicefiles\test-d-from-jk\test-d-from-jk.net"
+      (Type "Report"))
+    (File ".\lab05-pspicefiles\mystery\mystery.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\test-d-ff\test-d-ff.sim"
+        (DisplayName "test-D-FF-test-D-FF")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\test-d-ff\test-t-from-jk.sim"
+        (DisplayName "test-D-FF-test-t-from-jk")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\t-from-jk\t-from-jk.sim"
+        (DisplayName "T-from-JK-t-from-jk")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\test-d-ff\d-from-jk.sim"
+        (DisplayName "test-D-FF-D-from-JK")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\d-from-jk\d-from-jk.sim"
+        (DisplayName "D-from-JK-D-from-jk")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\test-t-from-jk\testtfromjk.sim"
+        (DisplayName "test-T-from-JK-testTfromJK")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\test-d-from-jk\testdfromjk.sim"
+        (DisplayName "test-D-from-JK-testDfromJK")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\lab05-pspicefiles\mystery\mystery.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab05-pspicefiles\mystery\mystery.sim"
+        (DisplayName "Mystery-mystery")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User)
+      (File ".\mystery.stl"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\mystery.stl")))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05.dsn")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05.dsn" "Mystery")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 431"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 771 130 591")
+        (Scroll "0 0")
+        (Zoom "88")
+        (Occurrence "/"))
+      (Path "C:\USERS\M\DESKTOP\CUDENVER\CSCI_1510\LABS\LAB05\LAB05.DSN")
+      (Schematic "Mystery")
+      (Page "Mystery")))
+  (PartMRUSelector
+    (DigStim1
+      (FullPartName "DigStim1.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (T-from-JK
+      (FullPartName "T-from-JK.Normal")
+      (LibraryName "C:\USERS\THRALLM\DESKTOP\CSCI_1510\LABS\LAB05\LAB05.OLB")
+      (DeviceIndex "0"))
+    (D-from-JK
+      (FullPartName "D-from-JK.Normal")
+      (LibraryName "C:\USERS\THRALLM\DESKTOP\CSCI_1510\LABS\LAB05\LAB05.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (7404
+      (FullPartName "7404.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (7486
+      (FullPartName "7486.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (74107
+      (FullPartName "74107.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (D-FF
+      (FullPartName "D-FF.Normal")
+      (LibraryName "C:\USERS\THRALLM\DESKTOP\CSCI_1510\LABS\LAB05\LAB05.OLB")
+      (DeviceIndex "0"))
+    (7400
+      (FullPartName "7400.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "1"))
+    (7410
+      (FullPartName "7410.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "m"))

@@ -1,0 +1,32 @@
+* C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\xy_carry_in.stl written on Sat Mar 26 15:16:58 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! X Digital Y Digital Carry_in Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 8ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Carry_in STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS Y STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS X STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat

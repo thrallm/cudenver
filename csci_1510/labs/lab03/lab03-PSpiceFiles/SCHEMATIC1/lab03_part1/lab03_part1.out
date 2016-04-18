@@ -1,0 +1,201 @@
+
+**** 03/01/16 04:21:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab03_part1"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab03\lab03-pspicefiles\schematic1\lab03_part1.si
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab03_part1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../lab03_stimulus.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB03
+.EXTERNAL OUTPUT output
+U_w         STIM(1,0) $G_DPWR $G_DGND N02339 IO_STM STIMULUS=w
+X_NOT1A         N02339 N02339 N05350 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_x         STIM(1,0) $G_DPWR $G_DGND N02684 IO_STM STIMULUS=x
+X_NOT2B         N02684 N02684 N05354 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_y         STIM(1,0) $G_DPWR $G_DGND N02955 IO_STM STIMULUS=y
+X_NOT3C         N02955 N02955 N05368 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_NOT4D         N03287 N03287 N05382 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_z         STIM(1,0) $G_DPWR $G_DGND N03287 IO_STM STIMULUS=z
+X_minterm1A         N05350 N05354 N05368 N03287 N08707 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm2A         N05350 N05354 N02955 N05382 N10677 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm4A         N05350 N02684 N05368 N05382 N08422 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm7A         N05350 N02684 N02955 N03287 N08673 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm8A         N02339 N05354 N05368 N05382 N09475 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm11A         N02339 N05354 N02955 N03287 N10693 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm13A         N02339 N02684 N05368 N03287 N09439 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_minterm14A         N02339 N02684 N02955 N05382 N09435 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_topNANDA         N08707 N10677 N08422 N08673 N13754 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_bottomNANDA         N09475 N10693 N09439 N09435 N13611 $G_DPWR $G_DGND 7420
++  PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_NOT5C         N13754 N13754 N17939 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_NOT6D         N13611 N13611 N13653 $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_finalNAND         N17939 N13653 OUTPUT $G_DPWR $G_DGND 7400 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+
+**** RESUMING lab03_part1.cir ****
+.END
+
+* C:\Users\thrallm\Desktop\csci_1510\labs\lab03\lab03_stimulus.stl written on Tue Feb 23 15:00:03 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! w Digital x Digital y Digital z Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 4ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS z STIM (1, 1) ;! CLOCK 8000 0.5 0 0
++   +0s 0
++   +62.5us 1
++   Repeat Forever
++      +62.5us 0
++      +62.5us 1
++   EndRepeat
+.STIMULUS y STIM (1, 1) ;! CLOCK 4000 0.5 0 0
++   +0s 0
++   +125us 1
++   Repeat Forever
++      +125us 0
++      +125us 1
++   EndRepeat
+.STIMULUS x STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS w STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+
+**** 03/01/16 04:21:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab03_part1"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab03\lab03-pspicefiles\schematic1\lab03_part1.si
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_00            D_20            
+      TPLHMN    4.400000E-09    4.800000E-09 
+      TPLHTY   11.000000E-09   12.000000E-09 
+      TPLHMX   22.000000E-09   22.000000E-09 
+      TPHLMN    2.800000E-09    3.200000E-09 
+      TPHLTY    7.000000E-09    8.000000E-09 
+      TPHLMX   15.000000E-09   15.000000E-09 
+
+
+**** 03/01/16 04:21:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab03_part1"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab03\lab03-pspicefiles\schematic1\lab03_part1.si
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 03/01/16 04:21:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab03_part1"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab03\lab03-pspicefiles\schematic1\lab03_part1.si
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =        0.00
+

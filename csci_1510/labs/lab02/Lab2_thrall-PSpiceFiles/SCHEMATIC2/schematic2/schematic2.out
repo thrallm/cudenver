@@ -1,0 +1,163 @@
+
+**** 02/15/16 21:36:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-schematic2"  [ c:\users\m\desktop\cudenver\1510_labs\lab02\lab2_thrall-pspicefiles\schematic2\schematic2.sim
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "schematic2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../lab2input.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source LAB2_THRALL
+.EXTERNAL OUTPUT xORyANDz
+.EXTERNAL OUTPUT xORyANDxORz
+X_U2A         N00278 N00260 XORYANDZ $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_x         STIM(1,0) $G_DPWR $G_DGND N00278 IO_STM STIMULUS=x
+X_U1A         N00198 N00186 N00260 $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_y         STIM(1,0) $G_DPWR $G_DGND N00198 IO_STM STIMULUS=y
+U_z         STIM(1,0) $G_DPWR $G_DGND N00186 IO_STM STIMULUS=z
+U_z1         STIM(1,0) $G_DPWR $G_DGND N00704 IO_STM STIMULUS=z
+X_U4A         N00589 N00632 N00828 $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U5A         N00821 N00828 XORYANDXORZ $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_x1         STIM(1,0) $G_DPWR $G_DGND N00589 IO_STM STIMULUS=x
+X_U4B         N00704 N00589 N00821 $G_DPWR $G_DGND 7432 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_y1         STIM(1,0) $G_DPWR $G_DGND N00632 IO_STM STIMULUS=y
+
+**** RESUMING schematic2.cir ****
+.END
+
+* C:\Users\thrallm\Desktop\1510_Labs\Lab2\lab2input.stl written on Thu Feb 11 14:11:13 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! x Digital y Digital z Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 4ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS x STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS y STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS z STIM (1, 1) ;! CLOCK 4000 0.5 0 0
++   +0s 0
++   +125us 1
++   Repeat Forever
++      +125us 0
++      +125us 1
++   EndRepeat
+
+**** 02/15/16 21:36:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-schematic2"  [ c:\users\m\desktop\cudenver\1510_labs\lab02\lab2_thrall-pspicefiles\schematic2\schematic2.sim
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_32            D_08            
+      TPLHMN    4.000000E-09    7.000000E-09 
+      TPLHTY   10.000000E-09   17.500000E-09 
+      TPLHMX   15.000000E-09   27.000000E-09 
+      TPHLMN    5.600000E-09    4.800000E-09 
+      TPHLTY   14.000000E-09   12.000000E-09 
+      TPHLMX   22.000000E-09   19.000000E-09 
+
+
+**** 02/15/16 21:36:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-schematic2"  [ c:\users\m\desktop\cudenver\1510_labs\lab02\lab2_thrall-pspicefiles\schematic2\schematic2.sim
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 02/15/16 21:36:46 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-schematic2"  [ c:\users\m\desktop\cudenver\1510_labs\lab02\lab2_thrall-pspicefiles\schematic2\schematic2.sim
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+

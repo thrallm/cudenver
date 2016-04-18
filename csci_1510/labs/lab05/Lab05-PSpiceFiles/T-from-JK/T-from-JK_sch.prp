@@ -1,0 +1,22 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("74107")
+    )
+    ("instances"
+        ("U1A"
+            ("device_name"	"74107")
+            ("pspice_path"	"X_U1A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+    )
+)

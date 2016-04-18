@@ -1,0 +1,32 @@
+* C:\Users\thrallm\Desktop\csci_1510\labs\lab05\test-t-from-jk.stl written on Thu Apr 14 15:10:37 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! Clear_n Digital Clk Digital T Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 305.06627028366ms 313.95515917255ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS Clear_n STIM (1, 1) ;! CLOCK 1 0.99999 0 0
++   +0s 0
++   +9.99999999995us 1
++   Repeat Forever
++      +0.99999s 0
++      +9.99999999995us 1
++   EndRepeat
+.STIMULUS Clk STIM (1, 1) ;! CLOCK 30000 0.5 0 0
++   +0s 0
++   +16.66666666667us 1
++   Repeat Forever
++      +16.66666666667us 0
++      +16.66666666667us 1
++   EndRepeat
+.STIMULUS T STIM (1, 1) ;! CLOCK 1k 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat

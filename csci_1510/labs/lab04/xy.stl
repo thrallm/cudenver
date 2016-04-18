@@ -1,0 +1,25 @@
+* C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\xy.stl written on Sat Mar 26 14:57:12 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! x Digital y Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 8ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS y STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS x STIM (1, 1) ;! CLOCK 500Hz 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat

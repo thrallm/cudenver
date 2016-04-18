@@ -1,0 +1,20 @@
+** Profile: "full_adder-full_adder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\full_adder\full_adder.sim ] 
+
+** Creating circuit file "full_adder.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../xy_carry_in.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\full_adder.net" 
+
+
+.END

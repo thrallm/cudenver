@@ -1,0 +1,157 @@
+
+**** 03/26/16 15:49:30 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "half_adder_demo-halfadder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\half_adder_demo\halfad
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "halfadder.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.STMLIB "../../../xy.stl" 
+.STMLIB "../../../2bitaddertest.stl" 
+.STMLIB "../../../xy_carry_in.stl" 
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\half_adder_demo.net" 
+
+
+
+**** INCLUDING half_adder_demo.net ****
+* source LAB04
+.EXTERNAL OUTPUT CARRY
+.EXTERNAL OUTPUT SUM
+X_U1A         N00746 N00750 SUM $G_DPWR $G_DGND 7486 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2A         N00746 N00750 CARRY $G_DPWR $G_DGND 7408 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_X         STIM(1,0) $G_DPWR $G_DGND N00746 IO_STM STIMULUS=X
+U_Y         STIM(1,0) $G_DPWR $G_DGND N00750 IO_STM STIMULUS=Y
+
+**** RESUMING halfadder.cir ****
+.END
+
+* C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\xy.stl written on Sat Mar 26 14:57:12 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! x Digital y Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 8ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS y STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS x STIM (1, 1) ;! CLOCK 500Hz 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat
+
+**** 03/26/16 15:49:30 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "half_adder_demo-halfadder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\half_adder_demo\halfad
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_86_1          D_86_2          D_86_3          
+      TPLHMN    0               3.600000E-09    4.800000E-09    2.400000E-09 
+      TPLHTY    0               9.000000E-09   12.000000E-09    6.000000E-09 
+      TPLHMX    0              17.000000E-09   24.000000E-09    6.000000E-09 
+      TPHLMN    0               2.000000E-09    2.800000E-09    2.400000E-09 
+      TPHLTY    0               5.000000E-09    7.000000E-09    6.000000E-09 
+      TPHLMX    0              11.000000E-09   16.000000E-09    6.000000E-09 
+
+
+               D_08            
+      TPLHMN    7.000000E-09 
+      TPLHTY   17.500000E-09 
+      TPLHMX   27.000000E-09 
+      TPHLMN    4.800000E-09 
+      TPHLTY   12.000000E-09 
+      TPHLMX   19.000000E-09 
+
+
+**** 03/26/16 15:49:30 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "half_adder_demo-halfadder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\half_adder_demo\halfad
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          
+        DRVL    0             104            
+        DRVH    0              96.4          
+       AtoD1                 AtoD_STD        
+       AtoD2                 AtoD_STD_NX     
+       AtoD3                 AtoD_STD        
+       AtoD4                 AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        
+       DtoA2 DtoA_STM        DtoA_STD        
+       DtoA3 DtoA_STM        DtoA_STD        
+       DtoA4 DtoA_STM        DtoA_STD        
+      TSWHL1                    1.511000E-09 
+      TSWHL2                    1.487000E-09 
+      TSWHL3                    1.511000E-09 
+      TSWHL4                    1.487000E-09 
+      TSWLH1                    3.517000E-09 
+      TSWLH2                    3.564000E-09 
+      TSWLH3                    3.517000E-09 
+      TSWLH4                    3.564000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 03/26/16 15:49:30 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "half_adder_demo-halfadder"  [ C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab04\lab04-PSpiceFiles\half_adder_demo\halfad
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .02
+
