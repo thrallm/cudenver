@@ -1,0 +1,18 @@
+/*
+Class: CSCI 1411-003
+Name: Mason Thrall
+Date: 02/04/2016
+Assignment: Lab 3.5
+Assignment Choice: Option 1 : Algorithm Outline
+*/
+ 
+* import and set stuff up
+* main
+  * declare variables
+  * collect user data
+    * grade1 
+    * grade2
+    * grade3
+  * average the grades
+    * (grade1 + grade2 + grade3) / count of grades
+  * display the average to the console
