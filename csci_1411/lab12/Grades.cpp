@@ -81,7 +81,9 @@ void readIt(ifstream &inData, gradeType gradeRec, int &total) {
 // is worth 40%.
 //**************************************************************
 void computeLetter(Grades &g){
+	// compute weighted average
 	float temp = .3 * (g.test1 + g.test2) + .4 * g.final;
+	// assign letter
 	if (temp >= 90 && temp <= 100)
 		g.letter = 'A';
 	else if (temp >= 80 && temp < 90)
@@ -99,4 +101,4 @@ void computeLetter(Grades &g){
 // char array they are stored in (cstring) is 16 chars long (NAMESIZE + 1). This is 
 // because the end of a cstring is the null character '\0'.
 //
-// Exercise 2:
+// Exercise 2: Code is extened to find the weighted average of the grades and output it.
