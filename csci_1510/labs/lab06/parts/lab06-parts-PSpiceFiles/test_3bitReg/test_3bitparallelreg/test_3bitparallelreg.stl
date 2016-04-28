@@ -1,0 +1,46 @@
+* C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts-PSpiceFiles\test_3bitReg\test_3bitparallelreg\test_3bitparallelreg.stl written on Wed Apr 27 21:43:52 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! CLK Digital CLR Digital IN0 Digital IN1 Digital IN2 Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 1.8s
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS CLK STIM (1, 1) ;! CLOCK 13373 0.5 0 0
++   +0s 0
++   +37.38876841397us 1
++   Repeat Forever
++      +37.38876841397us 0
++      +37.38876841397us 1
++   EndRepeat
+.STIMULUS CLR STIM (1, 1) ;! CLOCK 2 0.5 0 .01ms
++   +0s 0
++   +10us 1
++   Repeat Forever
++      +250ms 0
++      +250ms 1
++   EndRepeat
+.STIMULUS IN0 STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS IN1 STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS IN2 STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat

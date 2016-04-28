@@ -1,0 +1,144 @@
+(ExpressProject "lab06-parts"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\lab06-parts.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "0")
+    (ANNOTATE_Action "0")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "TRUE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\lab06-parts-pspicefiles\4to1mux\4to1mux.net"
+      (Type "Report"))
+    (File ".\lab06-parts-pspicefiles\test_mux\test_mux.net"
+      (Type "Report"))
+    (File ".\lab06-parts-pspicefiles\test_3bitreg\test_3bitreg.net"
+      (Type "Report"))
+    (File ".\lab06-parts.olb"
+      (Type "Schematic Library")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab06-parts-pspicefiles\4to1mux\xyz.sim"
+        (DisplayName "4to1MUX-xyz")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab06-parts-pspicefiles\test_mux\test_mux.sim"
+        (DisplayName "test_MUX-test_mux")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab06-parts-pspicefiles\test_3bitreg\test_3bitparallelreg.sim"
+        (DisplayName "test_3bitReg-test_3bitparallelreg")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\lab06-parts-pspicefiles\test_3bitreg\test_3bitparallelreg.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User)
+      (File "..\xyz.stl"
+        (Type "PSpiceLibrary")
+        (DisplayName "..\xyz.stl")))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts.dsn")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts.dsn"
+         "test_3bitReg")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts.dsn"
+         "4to1MUX")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts.dsn"
+         "test_MUX")
+      (Path "Outputs")
+      (Path "PSpice Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 427"))
+      (Tab 0)))
+  (PartMRUSelector
+    (4to1MUX
+      (FullPartName "4to1MUX.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0"))
+    (3bitParallelRegister
+      (FullPartName "3bitParallelRegister.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0"))
+    (DFF
+      (FullPartName "DFF.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0"))
+    (7404
+      (FullPartName "7404.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (DigStim1
+      (FullPartName "DigStim1.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (74107
+      (FullPartName "74107.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (D-from-JK
+      (FullPartName "D-from-JK.Normal")
+      (LibraryName "C:\USERS\THRALLM\DESKTOP\CSCI_1510\LABS\LAB05\LAB05.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-R
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (7408
+      (FullPartName "7408.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (7400
+      (FullPartName "7400.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (7420
+      (FullPartName "7420.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "m")
+  (LastUsedLibraryBrowseDirectory
+     "C:\Users\thrallm\Desktop\csci_1510\labs\lab06\parts"))

@@ -1,0 +1,81 @@
+* C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\lab06-final-PSpiceFiles\UniversalShiftReg\test_USR\test_usr.stl written on Wed Apr 27 23:20:06 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! CLK Digital P0 Digital P1 Digital P2 Digital CLR Digital ENABLE Digital S0 Digital S1 Digital SHIFT_L Digital SHIFT_R Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 22.56124064596ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS P2 STIM (1, 1) ;! CLOCK 1 0.5 0 0
++   +0s 0
++   +500ms 1
++   Repeat Forever
++      +500ms 0
++      +500ms 1
++   EndRepeat
+.STIMULUS P1 STIM (1, 1) ;! CLOCK 1 0.5 0 0
++   +0s 0
++   +500ms 1
++   Repeat Forever
++      +500ms 0
++      +500ms 1
++   EndRepeat
+.STIMULUS P0 STIM (1, 1) ;! CLOCK 1 0.5 1 0
++   +0s 1
++   +500ms 0
++   Repeat Forever
++      +500ms 1
++      +500ms 0
++   EndRepeat
+.STIMULUS CLK STIM (1, 1) ;! CLOCK 12325 0.5 0 0
++   +0s 0
++   +40.56795131846us 1
++   Repeat Forever
++      +40.56795131846us 0
++      +40.56795131846us 1
++   EndRepeat
+.STIMULUS CLR STIM (1, 1) ;! CLOCK 2 0.5 0 .01ms
++   +0s 0
++   +10us 1
++   Repeat Forever
++      +250ms 0
++      +250ms 1
++   EndRepeat
+.STIMULUS ENABLE STIM (1, 1) ;! CLOCK 25 0.5 1 0
++   +0s 1
++   +20ms 0
++   Repeat Forever
++      +20ms 1
++      +20ms 0
++   EndRepeat
+.STIMULUS S0 STIM (1, 1) ;! CLOCK 250 0.5 0 0
++   +0s 0
++   +2ms 1
++   Repeat Forever
++      +2ms 0
++      +2ms 1
++   EndRepeat
+.STIMULUS S1 STIM (1, 1) ;! CLOCK 125 0.5 0 0
++   +0s 0
++   +4ms 1
++   Repeat Forever
++      +4ms 0
++      +4ms 1
++   EndRepeat
+.STIMULUS SHIFT_L STIM (1, 1) ;! CLOCK 1 0.5 0 0
++   +0s 0
++   +500ms 1
++   Repeat Forever
++      +500ms 0
++      +500ms 1
++   EndRepeat
+.STIMULUS SHIFT_R STIM (1, 1) ;! CLOCK 1 0.5 1 0
++   +0s 1
++   +500ms 0
++   Repeat Forever
++      +500ms 1
++      +500ms 0
++   EndRepeat

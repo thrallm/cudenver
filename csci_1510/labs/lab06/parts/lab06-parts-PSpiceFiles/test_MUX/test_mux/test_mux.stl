@@ -1,0 +1,60 @@
+* C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\parts\lab06-parts-PSpiceFiles\test_MUX\test_mux\test_mux.stl written on Wed Apr 27 22:01:34 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! S0 Digital S1 Digital ENABLE Digital I0 Digital I1 Digital I2 Digital I3 Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 32ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS S0 STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS S1 STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat
+.STIMULUS ENABLE STIM (1, 1) ;! CLOCK 125 0.5 1 0
++   +0s 1
++   +4ms 0
++   Repeat Forever
++      +4ms 1
++      +4ms 0
++   EndRepeat
+.STIMULUS I0 STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS I1 STIM (1, 1) ;! CLOCK 4000 0.5 0 0
++   +0s 0
++   +125us 1
++   Repeat Forever
++      +125us 0
++      +125us 1
++   EndRepeat
+.STIMULUS I2 STIM (1, 1) ;! CLOCK 8000 0.5 0 0
++   +0s 0
++   +62.5us 1
++   Repeat Forever
++      +62.5us 0
++      +62.5us 1
++   EndRepeat
+.STIMULUS I3 STIM (1, 1) ;! CLOCK 16000 0.5 0 0
++   +0s 0
++   +31.25us 1
++   Repeat Forever
++      +31.25us 0
++      +31.25us 1
++   EndRepeat

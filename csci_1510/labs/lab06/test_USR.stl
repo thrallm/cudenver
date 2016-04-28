@@ -1,0 +1,46 @@
+* C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\test_USR.stl written on Wed Apr 27 22:52:18 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! CLK Digital P0 Digital P1 Digital P2 Digital CLR Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 11.67304543381ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS P2 STIM (1, 1) ;! CLOCK 2000 0.5 0 0
++   +0s 0
++   +250us 1
++   Repeat Forever
++      +250us 0
++      +250us 1
++   EndRepeat
+.STIMULUS P1 STIM (1, 1) ;! CLOCK 1000 0.5 0 0
++   +0s 0
++   +500us 1
++   Repeat Forever
++      +500us 0
++      +500us 1
++   EndRepeat
+.STIMULUS P0 STIM (1, 1) ;! CLOCK 500 0.5 0 0
++   +0s 0
++   +1ms 1
++   Repeat Forever
++      +1ms 0
++      +1ms 1
++   EndRepeat
+.STIMULUS CLK STIM (1, 1) ;! CLOCK 12325 0.5 0 0
++   +0s 0
++   +40.56795131846us 1
++   Repeat Forever
++      +40.56795131846us 0
++      +40.56795131846us 1
++   EndRepeat
+.STIMULUS CLR STIM (1, 1) ;! CLOCK 2 0.5 0 .01ms
++   +0s 0
++   +10us 1
++   Repeat Forever
++      +250ms 0
++      +250ms 1
++   EndRepeat

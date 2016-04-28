@@ -90,26 +90,23 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05.dsn")
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab05\lab05.dsn")
       (Path "Design Resources"
-         "C:\Users\m\Desktop\CUDenver\csci_1510\labs\lab05\lab05.dsn" "Mystery")
-      (Path "Outputs"))
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab05\lab05.dsn"
+         "D-FF")
+      (Path "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab05\lab05.dsn"
+         "D-from-JK")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab05\lab05.dsn"
+         "D-from-JK" "D-from-JK"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -31 0 200 0 431"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 130 771 130 591")
-        (Scroll "0 0")
-        (Zoom "88")
-        (Occurrence "/"))
-      (Path "C:\USERS\M\DESKTOP\CUDENVER\CSCI_1510\LABS\LAB05\LAB05.DSN")
-      (Schematic "Mystery")
-      (Page "Mystery")))
+      (Tab 0)))
   (PartMRUSelector
     (DigStim1
       (FullPartName "DigStim1.Normal")

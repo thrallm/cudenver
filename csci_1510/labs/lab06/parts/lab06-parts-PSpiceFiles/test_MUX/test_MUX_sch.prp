@@ -1,0 +1,219 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("DigStim1")
+        ("7400")
+        ("7420")
+    )
+    ("instances"
+        ("I0"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_I0")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("I1"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_I1")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("I2"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_I2")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("I3"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_I3")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("ENABLE"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_ENABLE")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("S0"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_S0")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("S1"
+            ("device_name"	"DigStim1")
+            ("pspice_path"	"U_S1")
+            ("level"	"0")
+            ("model_params"
+                ("STIMTYPE"
+                    ("value"	"DIGITAL")
+                    ("pspice_param"	"STIMTYPE")
+                )
+                ("IOMODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IOMODEL")
+                )
+            )
+        )
+        ("U1.U6A"
+            ("device_name"	"7400")
+            ("pspice_path"	"X_U1_U6A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U6B"
+            ("device_name"	"7400")
+            ("pspice_path"	"X_U1_U6B")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U3B"
+            ("device_name"	"7420")
+            ("pspice_path"	"X_U1_U3B")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U4A"
+            ("device_name"	"7420")
+            ("pspice_path"	"X_U1_U4A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U5A"
+            ("device_name"	"7420")
+            ("pspice_path"	"X_U1_U5A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U4B"
+            ("device_name"	"7420")
+            ("pspice_path"	"X_U1_U4B")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+        ("U1.U3A"
+            ("device_name"	"7420")
+            ("pspice_path"	"X_U1_U3A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+            )
+        )
+    )
+)

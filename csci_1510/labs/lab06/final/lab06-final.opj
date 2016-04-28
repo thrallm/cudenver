@@ -1,0 +1,71 @@
+(ExpressProject "lab06-final"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "..\parts\lab06-parts.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\lab06-final.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\lab06-final-pspicefiles\universalshiftreg\universalshiftreg.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\lab06-final-pspicefiles\universalshiftreg\test_usr.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\lab06-final-pspicefiles\universalshiftreg\test_usr.sim"
+        (DisplayName "UniversalShiftReg-test_USR")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 482"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 234 1519 234 755")
+        (Scroll "-138 0")
+        (Zoom "99")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\FINAL\LAB06-FINAL.DSN")
+      (Schematic "UniversalShiftReg")
+      (Page "UniversalShiftReg")))
+  (PartMRUSelector
+    (DigStim1
+      (FullPartName "DigStim1.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (4to1MUX
+      (FullPartName "4to1MUX.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0"))
+    (3bitParallelRegister
+      (FullPartName "3bitParallelRegister.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "m"))
