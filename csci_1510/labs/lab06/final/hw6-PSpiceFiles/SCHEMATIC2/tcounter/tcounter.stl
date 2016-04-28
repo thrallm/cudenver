@@ -1,0 +1,27 @@
+* C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\final\hw6-PSpiceFiles\tcounter.stl written on Thu Apr 28 03:25:05 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! CLK Digital L1 Digital CLR Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 519.40425670632us
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS CLK STIM (1, 1) ;! CLOCK 21364 0.5 0 0
++   +0s 0
++   +23.40385695563us 1
++   Repeat Forever
++      +23.40385695563us 0
++      +23.40385695563us 1
++   EndRepeat
+.STIMULUS L1 STIM (1, 1)
++   +0s 1
+.STIMULUS CLR STIM (1, 1) ;! CLOCK 2 0.5 0 0.000001
++   +0s 0
++   +1us 1
++   Repeat Forever
++      +250ms 0
++      +250ms 1
++   EndRepeat

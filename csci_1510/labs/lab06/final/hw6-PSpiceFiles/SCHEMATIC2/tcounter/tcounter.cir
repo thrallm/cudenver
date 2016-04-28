@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC2-tcounter"  [ C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\hw6-PSpiceFiles\SCHEMATIC2\tcounter.sim ] 
+
+** Creating circuit file "tcounter.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+.INC "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\hw6-PSpiceFiles\SCHEMATIC2\tcounter\tcounter_profile.i"
++ "nc" 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\m\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+.END

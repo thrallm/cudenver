@@ -1,0 +1,25 @@
+* C:\Users\m\Desktop\CUDenver\github\cudenver\csci_1510\labs\lab06\final\hw6-PSpiceFiles\brc.stl written on Thu Apr 28 02:43:02 2016
+* by Stimulus Editor -- Lite Version 16.6.0
+;!Stimulus Get
+;! CLK Digital CLR Digital
+;!Ok
+;!Plot Axis_Settings
+;!Xrange 0s 180ms
+;!AutoUniverse
+;!XminRes 1ns
+;!YminRes 1n
+;!Ok
+.STIMULUS CLR STIM (1, 1) ;! CLOCK 20 0.5 0 .0001
++   +0s 0
++   +100us 1
++   Repeat Forever
++      +25ms 0
++      +25ms 1
++   EndRepeat
+.STIMULUS CLK STIM (1, 1) ;! CLOCK 15235 0.5 0 0
++   +0s 0
++   +32.81916639317us 1
++   Repeat Forever
++      +32.81916639317us 0
++      +32.81916639317us 1
++   EndRepeat

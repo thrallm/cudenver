@@ -1,0 +1,83 @@
+(ExpressProject "hw6"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\hw6.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\hw6-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\hw6-pspicefiles\schematic2\schematic2.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\hw6-pspicefiles\schematic1\binaryripplecounter.sim"
+        (DisplayName "SCHEMATIC1-binaryripplecounter")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\hw6-pspicefiles\schematic2\tcounter.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\hw6-pspicefiles\schematic2\tcounter.sim"
+        (DisplayName "SCHEMATIC2-tcounter")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (DigStim1
+      (FullPartName "DigStim1.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCSTM.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (74107
+      (FullPartName "74107.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\EVAL.OLB")
+      (DeviceIndex "0"))
+    (DFF
+      (FullPartName "DFF.Normal")
+      (LibraryName
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\PARTS\LAB06-PARTS.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\hw6.dsn")
+      (Path "Design Resources"
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\hw6.dsn"
+         "SCHEMATIC2")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\final\hw6.dsn"
+         "SCHEMATIC2" "tcounter"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 427"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 78 1389 78 548")
+        (Scroll "-317 -6")
+        (Zoom "88")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\M\DESKTOP\CUDENVER\GITHUB\CUDENVER\CSCI_1510\LABS\LAB06\FINAL\HW6.DSN")
+      (Schematic "SCHEMATIC2")
+      (Page "tcounter"))))
