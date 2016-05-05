@@ -10,8 +10,15 @@
 
 using namespace std;
 
-class Employee
-{
+// prototypes
+class Employee;
+ostream& operator<< (ostream& _out, Employee& _employee);
+istream& operator>> (istream& _in, Employee& _employee);
+void inputEmployee(Employee& _employee);
+void printVector(ostream& _out, vector<Employee>& _employeeVector);
+void readFromFile(istream& _in, vector<Employee>& _employeeVector);
+
+class Employee {
 public:
 	Employee();
 	// mutators
@@ -42,10 +49,10 @@ Employee::Employee() {
 };
 
 ostream& operator<< (ostream& _out, Employee& _employee) {
-	_out << "Name: " << _employee.getName() << '\n';
-	_out << "ID: " << _employee.getID() << '\n';
-	_out << "Supervisor Name: " << _employee.getSupervisorName() << '\n';
-	_out << "Supervisor ID: " << _employee.getSupervisorID() << '\n';
+	_out << "Name: " << _employee.name << '\n';
+	_out << "ID: " << _employee.id << '\n';
+	_out << "Supervisor Name: " << _employee.supervisor->name << '\n';
+	_out << "Supervisor ID: " << _employee.supervisor->id << '\n';
 	return _out;
 }
 
