@@ -15,11 +15,10 @@ void displayInventory(vector<Vehicle> &vlist);
 void addVehicle(vector<Vehicle> &vlist);
 void updateVehicle(vector<Vehicle> &vlist);
 void deleteVehicle(vector<Vehicle> &vlist);
-void sortInventory(vector<Vehicle> &vlist);
-void searchInventory(vector<Vehicle> &vlist);
+void sortInventoryByVin(vector<Vehicle> &vlist);
+void searchInventoryByMake(vector<Vehicle> &vlist);
 void readInventoryFile(vector<Vehicle> &vlist);
 void writeInventoryFile(vector<Vehicle> &vlist);
-Vehicle getValidVehicle(vector<Vehicle> &vlist);
 int getValidVehicleIndex(vector<Vehicle> &vlist);
 // overloaded stream operator prototypes
 ostream &operator << (ostream &, const Vehicle &);
@@ -54,16 +53,12 @@ void displayInventory(vector<Vehicle> &vlist) {
 	cout << "==============================\n";
 	// Help with size_t http://stackoverflow.com/questions/7443222
 	for (size_t i = 0; i < vlist.size(); i++) {
-		cout << "Vehicle number:\t" << i + 1 << endl;
-		cout << "VIN:\t" << vlist[i].getVin() << endl;
-		cout << "Make:\t" << vlist[i].getMake() << endl;
-		cout << "Model:\t" << vlist[i].getModel() << endl;
-		cout << "Year:\t" << vlist[i].getYear() << endl;
-		cout << "Price:\t" << vlist[i].getPrice() << endl;
-		// TODO: display dealer info.
+		cout << "Vehicle Number:\t" << i + 1 << endl;
+		vlist[i].print();
 		cout << "-------------------------------\n";
 	}
 }
+
 //*********************************************
 // Add a vehicle.
 //*********************************************
@@ -72,22 +67,65 @@ void addVehicle(vector<Vehicle> &vlist) {
 	Vehicle v; // maybe should use a pointer here.
 	cin >> v; // overloaded insertion operator;
 	vlist.push_back(v); // does this mean v is duplicate storage?
-	cout << vlist.size() << endl;
+	//cout << vlist.size() << endl;
 }
 
 //*********************************************
 // Update a vehicle.
 //*********************************************
 void updateVehicle(vector<Vehicle> &vlist) {
+	char choice;
+	string temp;
 	if (!checkValidInventory(vlist)) {
 		return;
 	}
-	Vehicle v = getValidVehicle(vlist);
-	cout << v.getMake() << endl; // testing
+	int i = getValidVehicleIndex(vlist);
+	Vehicle v = vlist.at(i - 1); // adjust for 1 indexed menu.
+	cout << "You picked " << v.getMake() << " : " << v.getModel() << endl;
 	// Display a menu of the fields which they can update
 	// Get which field to update for the selected item
 	// Switch statement to collect input and call the
 	// appropriate Vehicle mutator.
+	cout << "Which element do you want to update?\n";
+	cout << "1. VIN\n2. Make\n3. Model\n4. Year\n5. Price\n6. DealerNum\n";
+	cin.get(choice);
+	cin.ignore();
+	switch (choice) {
+		case '1':
+			cout << "What is the new VIN?\n";
+			getline(cin, temp);
+			v.setVin(atoi(temp.c_str()));
+			break;
+		case '2':
+			cout << "What is the new make?\n";
+			getline(cin, temp);
+			v.setMake(temp);
+			break;
+		case '3':
+			cout << "What is the new model?\n";
+			getline(cin, temp);
+			v.setModel(temp);
+			break;
+		case '4':
+			cout << "What is the new year?\n";
+			getline(cin, temp);
+			v.setYear(atoi(temp.c_str()));
+			break;
+		case '5':
+			cout << "What is the new price?\n";
+			getline(cin, temp);
+			v.setPrice(atof(temp.c_str()));
+			break;
+		case '6':
+			cout << "What is the new dealer number?\n";
+			getline(cin, temp);
+			v.dealerPtr->setDealerNum(atoi(temp.c_str()));
+			break;
+		default:
+			cout << "invalid choice!\n";
+	}
+	// replace the vehicle in vlist at the appropriate index
+	vlist[i - 1] = v;
 }
 
 //*********************************************
@@ -108,21 +146,62 @@ void deleteVehicle(vector<Vehicle> &vlist) {
 //*********************************************
 // Sort the inventory.
 //*********************************************
-void sortInventory(vector<Vehicle> &vlist) {
+void sortInventoryByVin(vector<Vehicle> &vlist) {
+	if (!checkValidInventory(vlist)) {
+		return;
+	}
 	cout << "Sorting inventory...\n";
-	// TODO: Implement selection sort for the 
-	// vlist. Will need a temp Vehicle which
-	// could be a pointer to a Vehicle.
+	int start, minIndex;
+	Vehicle minV;
+	// Selection Sort
+	for (start = 0; start < (vlist.size() - 1); start++) {
+		minIndex = start;
+		minV = vlist[start];
+		for (int i = start + 1; i < vlist.size(); i++) {
+			if (vlist[i].getVin() < minV.getVin()) {
+				minV = vlist[i];
+				minIndex = i;
+			}
+		}
+		vlist[minIndex] = vlist[start];
+		vlist[start] = minV;
+	}
 }
 
 //*********************************************
-// Search the inventory.
+// Search the inventory by Make and 
+// return the index of the first match.
 //*********************************************
-void searchInventory(vector<Vehicle> &vlist) {
-	// Call sort on the Vehicle vector.
-	sortInventory(vlist);
-	cout << "Searching inventory...\n";
-	// TODO: Implement Binary Search on vlist.
+void searchInventoryByMake(vector<Vehicle> &vlist) {
+	if (!checkValidInventory(vlist)) {
+		return;
+	}
+	string searchMake;
+	bool found = false;
+	int foundIndex = -1;
+	cout << "Please enter the Make of the Vehicle to search for:\n";
+	getline(cin, searchMake);
+	// Linear Search (short list, and vector is not sorted by Make)
+	// add !found so it stops on the first vehicle it finds.
+	for (int i = 0; (i < vlist.size()) && !found; i++) {
+		if (vlist[i].getMake() == searchMake) {
+			found = true;
+			foundIndex = i;
+		}
+	}
+	if (found) {
+		cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+		cout << "Vehicle found! It is Vehicle number ";
+		cout << foundIndex + 1 << endl;
+		cout << "Vehicle info:\n";
+		vlist[foundIndex].print();
+		cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+	}
+	else {
+		cout << "---------------------------------------------------\n";
+		cout << "Sorry, no vehicle of that make found.\n";
+		cout << "---------------------------------------------------\n";
+	}
 }
 
 //*********************************************
@@ -160,7 +239,7 @@ void readInventoryFile(vector<Vehicle> &vlist) {
 void writeInventoryFile(vector<Vehicle> &vlist) {
 	cout << "Writing inventory file...\n";
 	ofstream outf;
-	outf.open("inventory.dat");
+	outf.open("inventory.out");
 	// http://stackoverflow.com/questions/7443222
 	for (size_t i = 0; i < vlist.size(); i++) {
 		outf << vlist[i];
@@ -177,15 +256,6 @@ bool checkValidInventory(vector<Vehicle> &vlist) {
 	if (!valid)
 		cout << "Inventory is empty!\n";
 	return valid;
-}
-
-//*********************************************
-// Get a valid vehicle from the inventory
-//*********************************************
-Vehicle getValidVehicle(vector<Vehicle> &vlist) {
-	int choice = getValidVehicleIndex(vlist);
-	Vehicle v = vlist.at(choice - 1); // adjust for 1 indexed menu.
-	return v;
 }
 
 //*********************************************
@@ -214,12 +284,13 @@ int getValidVehicleIndex(vector<Vehicle> &vlist) {
 // This calls public member functions, so it doesn't 
 // need to be a friend.
 //*********************************************
-ostream &operator << (ostream &strm, const Vehicle &obj) {
-	strm << obj.getVin() << endl;
-	strm << obj.getMake() << endl;
-	strm << obj.getModel() << endl;
-	strm << obj.getYear() << endl;
-	strm << obj.getPrice() << endl;
+ostream &operator << (ostream &strm, const Vehicle &v) {
+	strm << v.getVin() << endl;
+	strm << v.getMake() << endl;
+	strm << v.getModel() << endl;
+	strm << v.getYear() << endl;
+	strm << v.getPrice() << endl;
+	strm << v.dealerPtr->getDealerNum() << endl;
 	return strm;
 }
 
@@ -234,10 +305,11 @@ ostream &operator << (ostream &strm, const Vehicle &obj) {
 //*********************************************
 istream &operator >> (istream &strm, Vehicle &v) {
 	string temp;
+	int t;
 	cout << "Adding vehicle...\n";
 	cout << "Please enter the VIN:\n";
 	getline(strm, temp);
-	v.setVin(temp);
+	v.setVin(atoi(temp.c_str()));
 	cout << "Please enter the make:\n";
 	getline(strm, temp);
 	v.setMake(temp);
@@ -250,6 +322,11 @@ istream &operator >> (istream &strm, Vehicle &v) {
 	cout << "Please enter the price:\n";
 	getline(strm, temp);
 	v.setPrice(atof(temp.c_str()));
+	cout << "Please enter the dealer number:\n";
+	getline(strm, temp);
+	cout << temp;
+	t = atoi(temp.c_str());
+	v.dealerPtr->setDealerNum(t);
 	return strm;
 }
 

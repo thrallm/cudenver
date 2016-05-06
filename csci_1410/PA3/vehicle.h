@@ -18,27 +18,33 @@ public:
 
 class Vehicle {
 private:
-	string VIN;
+	int VIN;
 	string make;
 	string model;
 	int year;
 	double price;
-	Dealer dealer; // this needs to be a pointer
 public:
+	// public variables
+	Dealer* dealerPtr;
 	// constructors
 	Vehicle();
 	Vehicle(int v, string ma, string mo, int y, double p);
 	// accessors
-	string getVin() const;
+	int getVin() const;
 	string getMake() const;
 	string getModel() const;
 	int getYear() const;
 	double getPrice() const;
 	// mutators
-	void setVin(string v);
+	void setVin(int v);
 	void setMake(string m);
 	void setModel(string m);
 	void setYear(int y);
 	void setPrice(double p);
+	// other
+	void print();
+	//friends
+	friend ostream &operator << (ostream &strm, const Vehicle &obj);
+	friend istream &operator >> (istream &strm, Vehicle &v);
 };
 #endif

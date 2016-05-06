@@ -17,7 +17,6 @@ using namespace std;
 int main() {
 	short choice;
 	string temp;
-	Dealer d;
 	vector<Vehicle> vehicleList(0);
 	do {
 		displayMenu();
@@ -37,10 +36,10 @@ int main() {
 			deleteVehicle(vehicleList);
 			break;
 		case 5:
-			sortInventory(vehicleList);
+			sortInventoryByVin(vehicleList);
 			break;
 		case 6:
-			searchInventory(vehicleList);
+			searchInventoryByMake(vehicleList);
 			break;
 		case 7:
 			readInventoryFile(vehicleList);

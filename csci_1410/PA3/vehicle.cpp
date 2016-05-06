@@ -1,10 +1,12 @@
 #include "vehicle.h"
+#include <iostream>
+#include <iomanip>
 
 //*********************************************
 // Constructor for Dealer class.
 //*********************************************
 Dealer::Dealer() {
-	dealerNum = 0;
+	dealerNum = -1;
 }
 //*********************************************
 // Accessor for Dealer.dealerNum
@@ -23,11 +25,12 @@ void Dealer::setDealerNum(int d) {
 // Constructor for Vehicle class.
 //*********************************************
 Vehicle::Vehicle() {
-	VIN = "";
+	VIN = -1;
 	make = "";
 	model = "";
 	year = 0;
 	price = 0.0;
+	dealerPtr = new Dealer;
 }
 //*********************************************
 // Constructor for Vehicle class with params.
@@ -38,11 +41,12 @@ Vehicle::Vehicle(int v, string ma, string mo, int y, double p) {
 	model = mo;
 	year = y;
 	price = p;
+	dealerPtr = new Dealer;
 }
 //*********************************************
 // Accessor for Vehicle.VIN
 //*********************************************
-string Vehicle::getVin() const {
+int Vehicle::getVin() const {
 	return VIN;
 }
 //*********************************************
@@ -72,7 +76,7 @@ double Vehicle::getPrice() const {
 //*********************************************
 // Mutator for Vehicle.VIN
 //*********************************************
-void Vehicle::setVin(string v) {
+void Vehicle::setVin(int v) {
 	VIN = v;
 }
 //*********************************************
@@ -98,4 +102,13 @@ void Vehicle::setYear(int y) {
 //*********************************************
 void Vehicle::setPrice(double p) {
 	price = p;
+}
+
+void Vehicle::print() {
+	cout << "VIN:\t" << VIN << endl;
+	cout << "Make:\t" << make << endl;
+	cout << "Model:\t" << model << endl;
+	cout << "Year:\t" << year << endl;
+	cout << "Price:\t$" << fixed << setprecision(2) << price << endl;
+	cout << "Dealer Number:\t" << dealerPtr->getDealerNum() << endl;
 }
